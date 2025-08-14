@@ -1,4 +1,4 @@
-// Advanced Hike spot checker
+// NTNU Go console injection
 const events = [
   "Hike #1 (Advanced)",
   "Hike #2 (Advanced)"
@@ -32,7 +32,6 @@ async function checkSpots() {
     lastBothFull = false;
   }
 
-  // Display results
   results.forEach(r => {
     if (r.error) {
       console.error(`[${now}] Error checking ${r.eventName}:`, r.error);
@@ -49,6 +48,5 @@ async function checkSpots() {
   });
 }
 
-// Run immediately, then every 10 seconds
 checkSpots();
 setInterval(checkSpots, 10000);
